@@ -10,7 +10,8 @@ class App extends React.Component {
   state = {
     gitHubData: [], //initial states are empty
     gitHubFollowers: [],
-    username: ''
+    username: '',
+    usernameToFollow: ''
   }
 
   
@@ -27,7 +28,7 @@ class App extends React.Component {
     })
 
     axios
-    .get(`https://api.github.com/users/${this.state.gitHubData.username}/followers`) //get users followers
+    .get(`https://api.github.com/users/${this.state.gitHubData.usernameToFollow}/followers`) //get users followers
     .then((res)=>{
     console.log(this.state.gitHubData.username)
     this.setState({gitHubFollowers: res.data})
@@ -52,7 +53,9 @@ class App extends React.Component {
     .catch((err)=>{
       console.log(err)
     })
+    this.setState({usernameToFollow: this.state.username})
     this.setState({username: ''}) //resets input field
+    
   }
 
   render(){
