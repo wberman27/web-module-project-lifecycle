@@ -1,6 +1,6 @@
 import React from 'react'
 import Followers from './Followers'
-import './App.css'
+import '../App.css'
 import { v4 as uuid } from 'uuid';
 
 export default function User(props) {

@@ -54,12 +54,12 @@ a{
   color:black;
   border: 2px solid gold;
   border-radius: 4px;
-  transition: .3s;
+  transition: .3s ease-in-out;
   padding: 2px;
 }
 a:hover{
   background-color: pink;
-  transition: .3s
+  transition: .3s ease-in-out;
 }
 h3{
   margin: 5px;

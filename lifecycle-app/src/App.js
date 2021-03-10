@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import User from './User'
+import User from './components/User'
 import './App.css'
 import { v4 as uuid } from 'uuid';
 
@@ -25,9 +25,11 @@ class App extends React.Component {
     .catch((err)=>{
       console.log(err)
     })
+
     axios
-    .get(`https://api.github.com/users/${this.state.gitHubData.username}/followers`)
+    .get(`https://api.github.com/users/${this.state.gitHubData.username}/followers`) //get users followers
     .then((res)=>{
+    console.log(this.state.gitHubData.username)
     this.setState({gitHubFollowers: res.data})
     })
     .catch((err)=>{
@@ -58,7 +60,6 @@ class App extends React.Component {
     return(
       <>
       <div className ='header'>
-        <img className = 'headerImg' src='screenshot-images-pexels-com-photos-4584830-pexels-photo-4584830-jpeg-1615346076837.png' alt='code'/>
         <h1>GitHub Profiles</h1>
         <form onSubmit = {this.handleSubmit}>
           <input value = {this.state.username} onChange={this.handleChange} placeholder='enter username'></input>
