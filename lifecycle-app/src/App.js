@@ -24,21 +24,17 @@ class App extends React.Component {
     .catch((err)=>{
       console.log(err)
     })
+    axios
+    .get(`https://api.github.com/users/${this.state.gitHubData.username}/followers`)
+    .then((res)=>{
+    console.log(res)
+    this.setState({gitHubFollowers: res.data})
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
   }
 
-  // componentDidUpdate(prevState){
-  //   if(prevState.gitHubData !== this.state.gitHubData){
-  //       axios
-  //       .get(`https://api.github.com/users/${this.state.gitHubData.username}/followers`)
-  //       .then((res)=>{
-  //       console.log(res)
-  //       this.setState({gitHubFollowers: res.data})
-  //       })
-  //       .catch((err)=>{
-  //       console.log(err)
-  //       })
-  //   }
-  // }
   
   handleChange = (e) =>{
     this.setState({username: e.target.value}) //set username state to value of input text
@@ -73,6 +69,7 @@ class App extends React.Component {
     )
   }
 }
+
 
 
 export default App;
