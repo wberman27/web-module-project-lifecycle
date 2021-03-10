@@ -13,6 +13,7 @@ img{
 .userContainer{
   border-radius: 4px;
   display: flex;
+  flex-flow: column;
   padding: 10px;
   box-shadow: 0px 1px 3px black, 0px 1px 2px black ;
   background-image: linear-gradient(lightyellow, turquoise);
@@ -20,6 +21,7 @@ img{
 .followersContainer{
   border-radius: 4px;
   display: flex;
+  flex-flow: column;
   padding: 10px;
   box-shadow: 0px 1px 3px black, 0px 1px 2px black ;
   background-image: linear-gradient(lightyellow, turquoise);

@@ -15,6 +15,7 @@ export default function User(props) {
 
         </div>
         <div className = 'followersContainer'>
+            <h3>Followers: </h3>
             {props.gitHubFollowers.map(follower => (
                 <Followers follower = {follower}/>
             ))}   

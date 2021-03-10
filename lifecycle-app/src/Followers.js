@@ -6,6 +6,7 @@ export default function Followers(props) {
     return(
         <>
         <div className = 'followersCard'>
+            <h3>Followers: </h3>
             <img width='200px' src={props.follower.avatar_url} alt='github Followers profile avatar'/>
             {/* <h2>{props.follower.name}</h2>
             <p>{props.follower.bio}</p>
