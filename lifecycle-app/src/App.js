@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import User from './User'
 import './App.css'
+import { v4 as uuid } from 'uuid';
 
 
 class App extends React.Component {
@@ -27,7 +28,6 @@ class App extends React.Component {
     axios
     .get(`https://api.github.com/users/${this.state.gitHubData.username}/followers`)
     .then((res)=>{
-    console.log(res.data)
     this.setState({gitHubFollowers: res.data})
     })
     .catch((err)=>{
@@ -57,13 +57,15 @@ class App extends React.Component {
     console.log('App: Render')
     return(
       <>
+      <div className ='header'>
       <h1>GitHub Profiles</h1>
       <form onSubmit = {this.handleSubmit}>
         <input value = {this.state.username} onChange={this.handleChange} placeholder='enter username'></input>
         <button>Search</button>
       </form>
+      </div>
       <div className = 'userContainer'>
-        <User gitHubData = {this.state.gitHubData} gitHubFollowers = {this.state.gitHubFollowers}/>
+        <User key = {uuid()} gitHubData = {this.state.gitHubData} gitHubFollowers = {this.state.gitHubFollowers}/>
       </div>
       </>
     )

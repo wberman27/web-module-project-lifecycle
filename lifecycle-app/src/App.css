@@ -7,6 +7,12 @@ body{
   display:flex;
   justify-content: center;
 }
+.header{
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
+}
 .profileImg{
   border-radius: 4px;
 }
@@ -20,25 +26,46 @@ body{
   height: 10vh;
   <img className='codeImg' src='https://images.pexels.com/photos/4584830/pexels-photo-4584830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' alt='code'/>
 } */
-.userContainer{
+.userCard{
   border-radius: 4px;
   display: flex;
   flex-flow: column;
   padding: 10px;
   box-shadow: 0px 1px 3px black, 0px 1px 2px black ;
-  background-image: linear-gradient(lightyellow, turquoise);
+  background-image: linear-gradient(lightyellow, crimson);
+}
+.userContainer{
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  align-items: center;
 }
 .followersContainer{
+  display: flex;
+  flex-flow: row wrap;
+}
+.followersCard{
   border-radius: 4px;
   display: flex;
   flex-flow: column;
   padding: 10px;
   box-shadow: 0px 1px 3px black, 0px 1px 2px black ;
   background-image: linear-gradient(turquoise, lightyellow);
+  margin: 10px;
 }
 
 a{
   text-decoration: none;
-  color:orange;
-  text-shadow: 0px 1px 1px black;
+  color:black;
+  border: 2px solid gold;
+  border-radius: 4px;
+  transition: .3s;
+  padding: 2px;
+}
+a:hover{
+  background-color: pink;
+  transition: .3s
+}
+h3{
+  margin: 5px;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Followers from './Followers'
 import './App.css'
+import { v4 as uuid } from 'uuid';
 
 export default function User(props) {
 
@@ -14,10 +15,10 @@ export default function User(props) {
             <a href={props.gitHubData.html_url} target='_blank'>Go to {props.gitHubData.name}'s GitHub Page</a>
 
         </div>
+        <h3>Followers :</h3>
         <div className = 'followersContainer'>
-            <h3>Followers</h3>
             {props.gitHubFollowers.map(follower => (
-                <Followers follower = {follower}/>
+                <Followers key = {uuid()} follower = {follower}/>
             ))}   
         </div>
         </>

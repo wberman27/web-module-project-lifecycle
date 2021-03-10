@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
+import { v4 as uuid } from 'uuid';
 
 export default function Followers(props) {
-    console.log(props)
     return(
         <>
         <div className = 'followersCard'>
