@@ -12,7 +12,7 @@ export default function User(props) {
             <h2>{props.gitHubData.name}</h2>
             <p>{props.gitHubData.bio}</p>
             <p>Location: {props.gitHubData.location}</p>
-            <a href={props.gitHubData.html_url} target='_blank'>Go to {props.gitHubData.name}'s GitHub Page</a>
+            <a href={props.gitHubData.html_url} target='_blank'>Go to {props.gitHubData.login}'s GitHub Page</a>
 
         </div>
         <h3>Followers :</h3>

@@ -58,11 +58,12 @@ class App extends React.Component {
     return(
       <>
       <div className ='header'>
-      <h1>GitHub Profiles</h1>
-      <form onSubmit = {this.handleSubmit}>
-        <input value = {this.state.username} onChange={this.handleChange} placeholder='enter username'></input>
-        <button>Search</button>
-      </form>
+        <img className = 'headerImg' src='screenshot-images-pexels-com-photos-4584830-pexels-photo-4584830-jpeg-1615346076837.png' alt='code'/>
+        <h1>GitHub Profiles</h1>
+        <form onSubmit = {this.handleSubmit}>
+          <input value = {this.state.username} onChange={this.handleChange} placeholder='enter username'></input>
+          <button>Search</button>
+        </form>
       </div>
       <div className = 'userContainer'>
         <User key = {uuid()} gitHubData = {this.state.gitHubData} gitHubFollowers = {this.state.gitHubFollowers}/>
