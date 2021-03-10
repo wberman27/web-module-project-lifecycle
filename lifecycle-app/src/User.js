@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Followers from './Followers'
-import axios from 'axios'
 import './App.css'
 
 export default function User(props) {
